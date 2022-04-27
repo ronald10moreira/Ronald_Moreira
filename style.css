@@ -658,11 +658,11 @@
 /* SEÇÃO RML */
   .pagina1 {
     background-color: #1e1f26;
-    padding: 0 20px;
+    padding: 0 20rem;
     text-align: center;
     justify-content: center;
     height: 100vh;
-    padding:  0 2em;
+    padding:  0 2rem;
     display: flex;
     flex-direction: column;
   }
@@ -688,17 +688,20 @@
   }
 
   .caixa {
-    max-width: 960px;
+    max-width: 60rem;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
   }
 
-  .rml {
+  /* div class rml dentro da div class caixa */
+  /* .rml {
     display: flex;
     grid-template-columns: repeat(auto-fit)
     minmax(200px, 1fr);
     gap: 20px;
-  }
+  } */
 
   .boneco{
     position: relative;
@@ -707,8 +710,8 @@
 
   .boneco_oi{
     margin-top: 2.5rem;
-    max-width: 30rem;
-    max-height: 30rem;
+    max-width: 27rem;
+    max-height: 27rem;
     object-fit: cover;
     object-position: top;
     inset: 0;
@@ -718,11 +721,24 @@
   .texto-apresentacao {
     color: #faebd7;
     text-align: left;
-    font-size: 1vw;
+    font-size: 1rem;
     font: "ROBOTO", sans-serif;
     font-weight: 300;
     position:  relative;
     top: 10rem;
+  }
+
+  @media (min-width: 800px) {
+    .boneco_oi {
+      max-width: 25rem;
+      max-height: 25rem;
+    }
+
+    .texto-apresentacao{
+      font-size: 1rem;
+      position: relative;
+      top: 12rem;
+    }
   }
 
   @media only screen and (max-width: 600px) {
@@ -740,7 +756,7 @@
       top: 84rem;
       padding: 2rem 2rem;
       margin-left: -5rem;
-      font-size: 3vw;
+      font-size: 1rem;
     }
   }
 
@@ -748,7 +764,7 @@
   /* SEÇÃO DOS CONTATOS */
   .icon {
     display: inline-block;
-    font-size: 34px;
+    font-size: 2rem;
     animation: float 5s ease-in-out infinite;
     margin-top: 40rem;
     letter-spacing: 0.5rem;
